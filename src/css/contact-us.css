@@ -214,12 +214,12 @@ body {
     .contact-info {
         flex-direction: column; /* Change direction to column */
         gap: 20px; 
-        display: grid;
-        grid-template-columns: repeat(0, 1fr) !important;
+        /* display: grid;
+        grid-template-columns: repeat(0, 1fr) !important; */
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
     .contact-bg .text {
         width: 50%;
     }
@@ -230,7 +230,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .contact-info {
         grid-template-columns: repeat(4, 1fr);
     }
