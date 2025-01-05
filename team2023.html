@@ -14,12 +14,16 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 
 
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- <div id="preloader-container">
         <video id="preloader-video" autoplay muted loop>
         <source src="welcome - Trim.mp4" type="video/mp4">
@@ -27,20 +31,20 @@
       </video>
     </div> -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('preloader-video');
             var preloader = document.getElementById('preloader-container');
 
-            video.addEventListener('loadeddata', function() {
+            video.addEventListener('loadeddata', function () {
                 // Optionally add a delay or other conditions before hiding the preloader
-                setTimeout(function() {
+                setTimeout(function () {
                     fadeOut(preloader);
                 }, 2100); // Adjust the delay before hiding the preloader
             });
 
             function fadeOut(element) {
                 var opacity = 1;
-                var interval = setInterval(function() {
+                var interval = setInterval(function () {
                     if (opacity <= 0) {
                         clearInterval(interval);
                         element.style.display = 'none';
@@ -121,14 +125,14 @@
         /*linkedin*/
 
         .wrapper2 ul li:hover.linkedin {
-            border: 5px solid  #d14836;
-            box-shadow: 0 0 15px  #d14836;
+            border: 5px solid #d14836;
+            box-shadow: 0 0 15px #d14836;
             transition: all 0.5s ease;
         }
 
         .wrapper2 ul li:hover .fa-linkedin {
-            color:  #d14836;
-            text-shadow: 0 0 15px  #d14836;
+            color: #d14836;
+            text-shadow: 0 0 15px #d14836;
             transition: all 0.5s ease;
         }
 
@@ -152,9 +156,11 @@
             .wrapper2 {
                 width: 350px;
             }
+
             .wrapper2 ul li {
                 margin-top: 10px;
             }
+
             .wrapper2 ul li.google {
                 margin-left: 60px;
             }
@@ -164,9 +170,11 @@
             .wrapper2 {
                 width: 150px;
             }
+
             .wrapper2 ul li {
                 margin: 15px;
             }
+
             .wrapper2 ul li.google {
                 margin-left: 15px;
             }
@@ -179,6 +187,7 @@
 
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
             * {
                 padding: 0;
                 margin: 0;
@@ -239,7 +248,7 @@
                 transition: 0.3s;
             }
 
-           
+
 
             #hamburger-icon {
                 margin: auto 0;
@@ -283,23 +292,27 @@
                 left: 0;
                 height: calc(100vh - 50px);
                 width: 100%;
-                background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+                background-color: rgba(0, 0, 0, 0.8);
+                /* Semi-transparent black background */
                 padding: 10px 0;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+                /* Optional shadow for depth */
                 z-index: 2;
-            }         
+            }
 
 
             /* Ensure the menu only expands to fit its content */
             .mobile-menu li {
                 margin-bottom: 10px;
-                text-align: center; /* Center align menu items */
+                text-align: center;
+                /* Center align menu items */
             }
 
             @media only screen and (max-width: 600px) {
                 header nav {
                     display: none;
                 }
+
                 #hamburger-icon {
                     display: block;
                 }
@@ -313,18 +326,18 @@
         </script>
 
         <div id="brand"><a href="/">
-      <img src="src/img/logo.png" width="75px">
-    </a></div>
+                <img src="src/img/logo.png" width="75px">
+            </a></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li ><a href="div.html">Divisions</a></li> -->
-                <li ><a href="team2023.html">Team</a></li>
+                <li><a href="team2023.html">Team</a></li>
                 <li><a href="comp.html">Competitions</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
-                
-                
+
+
             </ul>
         </nav>
         <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
@@ -335,16 +348,18 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li><a href="div.html">Divisions</a></li> -->
-                <li><a href="team2023.html">Team</a></li>                
+                <li><a href="team2023.html">Team</a></li>
                 <li><a href="comp.html">Competitions</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
-                
+
             </ul>
         </div>
     </header>
     <script src="index.js"></script>
 
-    <iframe src="backgroundteam2023.html" frameborder="0" scrolling="no" style="width:100%; height:100%; position: fixed; top: 0; left: 0; z-index: -1;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+    <iframe src="backgroundteam2023.html" frameborder="0" scrolling="no"
+        style="width:100%; height:100%; position: fixed; top: 0; left: 0; z-index: -1;"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 
     <div class="container">
 
@@ -354,23 +369,32 @@
                 <div class="cols">
                     <div class="col" ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                            <div class="front" style="background-image: url(martianteampage/lastry/img/Utpal_Kumar.jpeg)">
+                            <div class="front"
+                                style="background-image: url(martianteampage/lastry/img/Utpal_Kumar.jpeg)">
 
                                 <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
                                     <h3>Utpal Kumar</h3>
                                 </div>
 
                             </div>
-                            <div class="back" style="background-image: url(martianteampage/lastry/img/Utpal_Kumar.jpeg); background-size: cover; background-position: center;">
+                            <div class="back"
+                                style="background-image: url(martianteampage/lastry/img/Utpal_Kumar.jpeg); background-size: cover; background-position: center;">
 
 
 
-                                <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                                <div class="inner"
+                                    style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
                                     <div class="inner text-center">
                                         <div class="wrapper2">
-                                            <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                                <li class="linkedin"><a href="https://www.linkedin.com/in/findutpalkumar/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                                <li class="email"><a href="mailto:contact.utpalkumar@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                            <ul
+                                                style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                                <li class="linkedin"><a
+                                                        href="https://www.linkedin.com/in/findutpalkumar/"
+                                                        target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                            aria-hidden="true"></i></a></li>
+                                                <li class="email"><a href="mailto:contact.utpalkumar@gmail.com"><i
+                                                            class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -391,461 +415,504 @@
             </div>
     </div>
 
-    
+
     <div class="wrapper1">
-      <h1>Team Members</h1>
-      <div class="cols">
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-              <div class="container">
-                  <div class="front" style="background-image: url(martianteampage/lastry/img/akshat.jpeg)">
+        <h1>Team Members</h1>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/akshat.jpeg)">
 
-                      <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                          <h3>Akshat Agarwal</h3>
-                      </div>
-
-                  </div>
-                  <div class="back" style="background-image: url(martianteampage/lastry/img/akshat.jpeg); background-size: cover; background-position: center;">
-
-
-
-                      <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                          <div class="inner text-center">
-                              <div class="wrapper2">
-                                  <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                      <li class="linkedin"><a href="https://www.linkedin.com/in/akshat-agarwal-346aab264/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                      <li class="email"><a href="mailto: eng22am0072@dsu.edu.in "><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-
-
-                      </div>
-                  </div>
-
-
-
-
-
-              </div>
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-              <div class="container">
-                  <div class="front" style="background-image: url(martianteampage/lastry/img/Deekshitha\ M.jpg)">
-
-                      <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                          <h3>Deekshitha M</h3>
-                      </div>
-
-                  </div>
-                  <div class="back" style="background-image: url(martianteampage/lastry/img/Deekshitha\ M.jpg); background-size: cover; background-position: center;">
-
-
-
-                      <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                          <div class="inner text-center">
-                              <div class="wrapper2">
-                                  <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                      <li class="linkedin"><a href="https://www.linkedin.com/in/deekshitha-m-527650216/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                      <li class="email"><a href="mailto:deekshithamanjunathreddy@example.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-
-
-                      </div>
-                  </div>
-
-
-
-
-
-              </div>
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-              <div class="container">
-                  <div class="front" style="background-image: url(martianteampage/lastry/img/vamsi.jpeg)">
-
-                      <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                          <h3>K Vamsi Krishna</h3>
-                      </div>
-
-                  </div>
-                  <div class="back" style="background-image: url(martianteampage/lastry/img/vamsi.jpeg); background-size: cover; background-position: center;">
-
-
-
-                      <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                          <div class="inner text-center">
-                              <div class="wrapper2">
-                                  <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                      <li class="linkedin"><a href="https://www.linkedin.com/in/k-vamsi-krishna-068016316/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                      <li class="email"><a href="mailto:krish13vamsi@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-
-
-                      </div>
-                  </div>
-
-
-
-
-
-              </div>
-          </div>
-
-
-          
-      </div>
-  </div>
-  <div class="wrapper1">
-    
-    <div class="cols">
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(martianteampage/lastry/img/mithun.jpeg)">
-
-                    <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                        <h3>Mithun P</h3>
-                    </div>
-
-                </div>
-                <div class="back" style="background-image: url(martianteampage/lastry/img/mithun.jpeg); background-size: cover; background-position: center;">
-
-
-
-                    <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                        <div class="inner text-center">
-                            <div class="wrapper2">
-                                <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                    <li class="linkedin"><a href="https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                    <li class="email"><a href="mailto:mithunreddyp05@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Akshat Agarwal</h3>
                         </div>
 
-
                     </div>
-                </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/akshat.jpeg); background-size: cover; background-position: center;">
 
 
 
-
-
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(martianteampage/lastry/img/pushkar.jpeg)">
-
-                    <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                        <h3>Pushkar Pallav</h3>
-                    </div>
-
-                </div>
-                <div class="back" style="background-image: url(martianteampage/lastry/img/pushkar.jpeg); background-size: cover; background-position: center;">
-
-
-
-                    <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                        <div class="inner text-center">
-                            <div class="wrapper2">
-                                <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                    <li class="linkedin"><a href="https://www.linkedin.com/in/pushkar-pallav-679538236/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                    <li class="email"><a href="mailto:eng22am0187@dsu.edu.in"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                </ul>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/akshat-agarwal-346aab264/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto: eng22am0072@dsu.edu.in "><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/Deekshitha\ M.jpg)">
+
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Deekshitha M</h3>
                         </div>
 
-
                     </div>
-                </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/Deekshitha\ M.jpg); background-size: cover; background-position: center;">
 
 
 
-
-
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(martianteampage/lastry/img/sujay.jpg)">
-
-                    <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                        <h3>R Sujay</h3>
-                    </div>
-
-                </div>
-                <div class="back" style="background-image: url(martianteampage/lastry/img/sujay.jpg); background-size: cover; background-position: center;">
-
-
-
-                    <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                        <div class="inner text-center">
-                            <div class="wrapper2">
-                                <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                    <li class="linkedin"><a href="https://www.linkedin.com/in/r-sujay-b4ba5624b/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                    <li class="email"><a href="mailto:eng22am0122@dsu.edu.in"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                                </ul>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/deekshitha-m-527650216/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:deekshithamanjunathreddy@example.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/vamsi.jpeg)">
+
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>K Vamsi Krishna</h3>
                         </div>
 
-
                     </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/vamsi.jpeg); background-size: cover; background-position: center;">
+
+
+
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/k-vamsi-krishna-068016316/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:krish13vamsi@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
-
-
-
-
-
             </div>
+
+
+
         </div>
-
-
-        
     </div>
-</div>
-<div class="wrapper1">
-  
-  <div class="cols">
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/renuka.jpeg)">
+    <div class="wrapper1">
+
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/mithun.jpeg)">
 
-                  <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                      <h3>Renuka Anil Sutar</h3>
-                  </div>
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Mithun P</h3>
+                        </div>
 
-              </div>
-              <div class="back" style="background-image: url(martianteampage/lastry/img/renuka.jpeg); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/mithun.jpeg); background-size: cover; background-position: center;">
 
 
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="https://www.linkedin.com/in/renuka-anil-sutar-726245271/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:renukasutar1705@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/" target="_blank"><i
+                                                    class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:mithunreddyp05@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
 
-                  </div>
-              </div>
+                        </div>
+                    </div>
 
 
 
 
 
-          </div>
-      </div>
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/rohan_jaswail.jpeg)">
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/pushkar.jpeg)">
 
-                  <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                      <h3>Rohan Jaiswal</h3>
-                  </div>
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Pushkar Pallav</h3>
+                        </div>
 
-              </div>
-              <div class="back" style="background-image: url(martianteampage/lastry/img/rohan_jaswail.jpeg); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/pushkar.jpeg); background-size: cover; background-position: center;">
 
 
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="https://www.linkedin.com/in/rohanjais/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:Rj024245@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/pushkar-pallav-679538236/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:eng22am0187@dsu.edu.in"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
 
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/sujay.jpg)">
 
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>R Sujay</h3>
+                        </div>
 
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/sujay.jpg); background-size: cover; background-position: center;">
 
 
 
-          </div>
-      </div>
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/rohan_susrela.jpeg)">
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/r-sujay-b4ba5624b/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:eng22am0122@dsu.edu.in"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                  <div class="inner" style="top: 90%; background-color:#CFB997; padding: 10px;">
-                      <h3>Rohan Susarla</h3>
-                  </div>
 
-              </div>
-              <div class="back" style="background-image: url(martianteampage/lastry/img/rohan_susrela.jpeg); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
 
 
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="https://www.linkedin.com/in/rohan-k-susarla-2b0872303/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:Suarlarohan261@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
 
 
-                  </div>
-              </div>
+                </div>
+            </div>
 
 
 
+        </div>
+    </div>
+    <div class="wrapper1">
 
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/renuka.jpeg)">
 
-          </div>
-      </div>
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Renuka Anil Sutar</h3>
+                        </div>
 
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/renuka.jpeg); background-size: cover; background-position: center;">
 
-      
-  </div>
-</div>
 
-<div class="wrapper1">
-  
-  <div class="cols">
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/tarita.jpeg)">
 
-                  <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                      <h3>Tarita Shetty</h3>
-                  </div>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/renuka-anil-sutar-726245271/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:renukasutar1705@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-              </div>
-              <div class="back" style="background-image: url(martianteampage/lastry/img/tarita.jpeg); background-size: cover; background-position: center;">
 
+                        </div>
+                    </div>
 
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="www.linkedin.com/in/tarita-shetty-84230b260" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:taritashetty2004@gmail.com "><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
 
 
-                  </div>
-              </div>
 
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/rohan_jaswail.jpeg)">
 
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Rohan Jaiswal</h3>
+                        </div>
 
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/rohan_jaswail.jpeg); background-size: cover; background-position: center;">
 
 
-          </div>
-      </div>
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/yogesh.jpg)">
 
-                  <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                      <h3>Yogesh V</h3>
-                  </div>
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/rohanjais/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:Rj024245@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-              </div>
-              <div class="back" style="background-image: url(martianteampage/lastry/img/yogesh.jpg); background-size: cover; background-position: center;">
 
+                        </div>
+                    </div>
 
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="https://www.linkedin.com/in/yogesh-v-b11bb8259/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:Yogeshvdevang@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
 
 
-                  </div>
-              </div>
 
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/rohan_susrela.jpeg)">
 
+                        <div class="inner" style="top: 90%; background-color:#CFB997; padding: 10px;">
+                            <h3>Rohan Susarla</h3>
+                        </div>
 
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/rohan_susrela.jpeg); background-size: cover; background-position: center;">
 
 
-          </div>
-      </div>
-      <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-              <div class="front" style="background-image: url(martianteampage/lastry/img/)">
-<!-- 
-                  <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
-                      <h3></h3>
-                  </div>
 
-              </div>
-              <div class="back" style="background-image: url(background1-fotor-2024030355421.jpeg); background-size: cover; background-position: center;">
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a
+                                                href="https://www.linkedin.com/in/rohan-k-susarla-2b0872303/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:Suarlarohan261@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
 
+                        </div>
+                    </div>
 
-                  <div class="inner" style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
-                      <div class="inner text-center">
-                          <div class="wrapper2">
-                              <ul style="display: flex; justify-content: center; align-items: center; height: 80%;">
-                                  <li class="linkedin"><a href="https://www.linkedin.com/in/akshat-agarwal-346aab264/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                                  <li class="email"><a href="mailto:your.email@example.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-                              </ul> -->
-                          </div>
-                      </div>
 
 
-                  </div>
-              </div>
 
 
+                </div>
+            </div>
 
 
 
-          </div>
-      </div>
+        </div>
+    </div>
 
+    <div class="wrapper1">
 
-      
-  </div>
-</div>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/tarita.jpeg)">
 
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Tarita Shetty</h3>
+                        </div>
 
-    
-                       
-                          
-                          
-                          
-                        
-                        
-          </div>
-        
-        
-          </div>
-         
-          <iframe src="footer.html " width="100% " height="465px " frameborder="0 "></iframe>
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/tarita.jpeg); background-size: cover; background-position: center;">
 
 
-        </body>
-   
-        </main>
+
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a href="www.linkedin.com/in/tarita-shetty-84230b260"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:taritashetty2004@gmail.com "><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(martianteampage/lastry/img/yogesh.jpg)">
+
+                        <div class="inner" style="top: 90%; background-color: #CFB997; padding: 10px;">
+                            <h3>Yogesh V</h3>
+                        </div>
+
+                    </div>
+                    <div class="back"
+                        style="background-image: url(martianteampage/lastry/img/yogesh.jpg); background-size: cover; background-position: center;">
+
+
+
+                        <div class="inner"
+                            style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);">
+                            <div class="inner text-center">
+                                <div class="wrapper2">
+                                    <ul
+                                        style="display: flex; justify-content: center; align-items: center; height: 80%;">
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/yogesh-v-b11bb8259/"
+                                                target="_blank"><i class="fa fa-linkedin fa-2x"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li class="email"><a href="mailto:Yogeshvdevang@gmail.com"><i
+                                                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+           
         </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js "></script>
-  <script src="script.js "></script>
-   
+
+
+
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+    <iframe src="footer.html " width="100% " height="465px " frameborder="0 "></iframe>
+
+
 </body>
+
+</main>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js "></script>
+<script src="script.js "></script>
+
+</body>
+
 </html>
