@@ -18,28 +18,16 @@
     <link rel="stylesheet" href="src/css/styles.css">
     <script src="./src/js/jquery.min.js"></script>
     <style>
-        .contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 50px auto;
-    max-width: 600px;
-    padding: 30px;
-    background-color:wheat;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
+       
 
-.contact-form form {
+/* .contact-form form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
+} */
 
-.contact-form input,
+/* .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 15px;
@@ -67,7 +55,23 @@
     margin-top: 20px;
     width: 100%;
     max-width: 300px;
+} */
+
+@media only screen and (max-width: 768px) {
+    #ff-compose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto auto;
+    max-width: 80%;
+    padding: 30px;
+    background-color:wheat;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+            }
 
 .contact-info {
     display: flex;
@@ -291,13 +295,13 @@
                 <div>
                     <span><i class = "fas fa-mobile-alt"></i></span>
                     <span>Phone No.</span>
-                    <span class="text">Utpal Kumar:  +91 63981 10810</span>
+                    <span class="text">+91 63981 10810</span>
                     
                 </div>
                 <div>
                     <span><i class = "fas fa-envelope-open"></i></span>
                     <span>E-mail</span>
-                    <span class="text">contact.utpalkumar@gmail.com</span>
+                    <span class="text">trixanth@gmail.com</span>
                 </div>
                 <div>
                     <span><i class = "fas fa-map-marker-alt"></i></span>
@@ -311,22 +315,25 @@
                 </div>-->
             </div>
 
-            <div class="contact-form">
-                <form name="submit-to-google-sheet">
+            <!-- <div class="contact-form"> -->
+                <!-- <form name="submit-to-google-sheet">
                     <div>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                     </div>
                     <textarea rows="6" placeholder="Your Message" class="form-control" name="message"></textarea>
-                    <!--<input type="submit" class="send-btn" value="send message">-->
+                    
                     <button type="submit" class="send-btn">Submit</button>
-                </form>
+                </form> -->
+                <div id="ff-compose"></div>
+                
+                <script async defer src="https://formfacade.com/include/113991001960694647138/form/1FAIpQLScZo7sd-4ebhyfm8HEUW8RM0Qiiia5PJmP7PHQlkJrgeH1g3w/classic.js?div=ff-compose"></script>
 
-                <div>
+                <!-- <div>
                     <img src="./src/img/contact-image/contact-png.png" alt="">
                 </div>
-                <span id="msg"></span>
-            </div>
+                <span id="msg"></span> -->
+            <!-- </div> -->
             
         </div>
 
