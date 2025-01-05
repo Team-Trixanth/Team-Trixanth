@@ -212,7 +212,7 @@ body {
         margin-right: auto;
     }
     .contact-info {
-        flex-direction: row; /* Change direction to column */
+        flex-direction: column; /* Change direction to column */
         gap: 20px; 
         display: grid;
         grid-template-columns: repeat(0, 1fr) !important;

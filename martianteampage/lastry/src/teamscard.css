@@ -141,6 +141,7 @@ html,
 body {
     width: 100%;
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -149,6 +150,7 @@ body {
     font-weight: 400;
     background: #ffffff;
     color: #fff;
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -218,7 +220,7 @@ h4 {
 .section1 {
     height: 100vh;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
 }
 
@@ -460,7 +462,7 @@ h1 {
 }
 
 .video-container {
-    position: relative;
+    position:absolute;
     overflow: hidden;
 }
 

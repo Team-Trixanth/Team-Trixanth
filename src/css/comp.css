@@ -108,9 +108,13 @@
     line-height: 61px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
     #home {
         padding: 150px 0px 150px 0px;
+    }
+    #comp {
+        background-size: cover;
+        padding: 20px;
     }
     
     .comp-text {
