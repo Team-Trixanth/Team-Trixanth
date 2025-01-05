@@ -212,7 +212,11 @@ body {
         margin-right: auto;
     }
     .contact-info {
-        flex-direction: column; /* Change direction to column */
+        display: flex;
+        
+        align-items: center; /* Center align items */
+        
+        flex-direction: column !important; /* Change direction to column */
         gap: 20px; 
         /* display: grid;
         grid-template-columns: repeat(0, 1fr) !important; */
