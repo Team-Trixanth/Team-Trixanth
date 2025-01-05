@@ -73,8 +73,10 @@ body {
 .contact-body {
     /* max-width: 1320px; */
     background: wheat;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* margin: 0 auto; */
+    /* /padding: 0 1rem; */
+    margin-bottom: 0; /* Remove any bottom margin */
+    padding-bottom: 0;
 }
 
 .contact-info {
@@ -90,6 +92,7 @@ body {
 .contact-info div {
     margin: 0.8rem 0;
     padding: 1rem;
+    color: #481f19;
 }
 
 .contact-info span .fas {
@@ -164,8 +167,11 @@ body {
 }
 
 .contact-footer {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     background: #481f19;
+    height: 100%;
+    /* margin-top: ; Ensure no extra margin */
+    padding-top: 2rem; 
 }
 
 .contact-footer h3 {
@@ -199,15 +205,17 @@ body {
     border-color: #c01616;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact-bg .text {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
     .contact-info {
+        flex-direction: row; /* Change direction to column */
+        gap: 20px; 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(0, 1fr) !important;
     }
 }
 
@@ -217,7 +225,7 @@ body {
     }
     .contact-form {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(, 1fr);
         align-items: center;
     }
 }

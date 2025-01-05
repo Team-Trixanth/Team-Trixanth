@@ -35,38 +35,165 @@
 
     <div class="home-page">
 
-        <nav id="transparent-navbar" class="navbar navbar-expand-lg red-hat-font">
-            <a class="navbar-brand" href="index.html">
-                <img src="./src/img/logo.png" width="75px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger-animated"><span></span><span></span><span></span></div>
-            </button>
+        <header>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <style>
+                @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+                * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+    
+                body {
+                    background-color: #353836;
+                    color: white;
+                    font-family: "Poppins", sans-serif;
+                }
+    
+                header a {
+                    text-decoration: none;
+                }
+    
+                header {
+                    padding: 0 30px;
+                background-color: #000000;
+                height: 70px;
+                display: flex;
+                justify-content: space-between;
+                z-index: 1;
+                position: relative;
+                }
+    
+                #brand {
+                    font-weight: bold;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                }
+    
+                #brand a {
+                    color: #09c372;
+                }
+    
+                ul {
+                    list-style: none;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+    
+                ul a {
+                    color: white;
+                }
+    
+                ul li {
+                    padding: 5px;
+                    margin-left: 10px;
+                }
+    
+                ul li:hover {
+                    transform: scale(1.1);
+                    transition: 0.3s;
+                }
+    
+                
+    
+                #hamburger-icon {
+                    margin: auto 0;
+                    display: none;
+                    cursor: pointer;
+                }
+    
+                #hamburger-icon div {
+                    width: 35px;
+                    height: 3px;
+                    background-color: white;
+                    margin: 6px 0;
+                    transition: 0.4s;
+                }
+    
+                .open .bar1 {
+                    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+                    transform: rotate(-45deg) translate(-6px, 6px);
+                }
+    
+                .open .bar2 {
+                    opacity: 0;
+                }
+    
+                .open .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+                    transform: rotate(45deg) translate(-6px, -8px);
+                }
+    
+                .open .mobile-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+    
+                .mobile-menu {
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    height: calc(100vh - 50px);
+                    width: 100%;
+                }
+    
+                .mobile-menu li {
+                    margin-bottom: 10px;
+                }
+    
+                @media only screen and (max-width: 600px) {
+                    header nav {
+                        display: none;
+                    }
+                    #hamburger-icon {
+                        display: block;
+                    }
+                }
+            </style>
+    
+            <script>
+                function toggleMobileMenu(menu) {
+                    menu.classList.toggle('open');
+                }
+            </script>
+    
+            <div id="brand"><a href="/">
+          <img src="src/img/logo.png" width="75px">
+        </a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rovers.html">Sponsorship</a></li>
+                    <!-- <li ><a href="div.html">Divisions</a></li> -->
+                    <li ><a href="team2023.html">Team</a></li>
+                    <li><a href="comp.html">Competitions</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    
+                    
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item animate-this">
-                        <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./rovers.html">Sponsorship</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="team2023.html">Team</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./comp.html">Competitions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact-us.html">Contact</a>
-                    </li>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu" style="z-index: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rovers.html">Sponsorship</a></li>
+                    <!-- <li><a href="div.html">Divisions</a></li> -->
+                    <li><a href="team2023.html">Team</a></li>                
+                    <li><a href="comp.html">Competitions</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    
                 </ul>
             </div>
-        </nav>
+        </header>
 
         <main data-barba="container" data-barba-namespace="home">
 
@@ -150,16 +277,15 @@
         hiddenElements.forEach((el) => observer.observe(el));
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async
-        src="https://script.google.com/macros/s/AKfycbyXYBegDZ_zZpmCZM6rXe0dPINYoLYYHPfW3h7n9g-gw86sZoz4_KvM8m8knh3KG31CLQ/exec"></script>
+    
     <script>
         window.dataLayer = window.dataLayer || [];
-
+    
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
+    
         gtag('config', 'UA-162930243-1');
     </script>
 </body>

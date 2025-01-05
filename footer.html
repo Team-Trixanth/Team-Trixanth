@@ -18,31 +18,7 @@
 
 </head>
 <style>
-    section {
-        padding: 100px 0;
-        min-height: 100%;
-        width: 100%;
-    }
-
-    a,    a:hover,    a:focus,    a:active {
-        text-decoration: none;
-        outline: none;
-    }
-
-    a,    a:active,    a:focus {
-        color: #6f6f6f;
-        text-decoration: none;
-        transition-timing-function: ease-in-out;
-        -ms-transition-timing-function: ease-in-out;
-        -moz-transition-timing-function: ease-in-out;
-        -webkit-transition-timing-function: ease-in-out;
-        -o-transition-timing-function: ease-in-out;
-        transition-duration: .2s;
-        -ms-transition-duration: .2s;
-        -moz-transition-duration: .2s;
-        -webkit-transition-duration: .2s;
-        -o-transition-duration: .2s;
-    }
+   
 
     ul {
         margin: 0;
@@ -61,6 +37,7 @@
         overflow: hidden;
         z-index: 9;
         width: 100%;
+        height: 100%;
     }
 
     .footer-section:before {
@@ -69,7 +46,7 @@
         top: -150%;
         left: -18%;
         width: 44%;
-        height: 257%;
+        height: 300%;
         transform: rotate(54deg);
         background-color: rgb(18, 3, 20);
         -webkit-transform: rotate(54deg);
@@ -86,7 +63,7 @@
         top: -24%;
         right: 4%;
         width: 26%;
-        height: 264%;
+        height: 300%;
         transform: rotate(44deg);
         -webkit-transform: rotate(44deg);
         -moz-transform: rotate(44deg);
@@ -96,33 +73,15 @@
     }
 
     .footer-top {
-        padding-top: 96px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 
     .footer-top p,    .company-footer-contact-list li {
         color: #ffffff;
     }
 
-    .company-footer-contact-list {
-        margin-top: 10px;
-    }
-
-    .company-footer-contact-list li {
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
-    }
-
-    .company-footer-contact-list li+li {
-        margin-top: 5px;
-    }
-
-    .company-footer-contact-list li i {
-        margin-right: 10px;
-        font-size: 20px;
-        display: inline-block;
-    }
+    
 
     .footer-top .site-logo {
         margin-bottom: 25px;
@@ -130,39 +89,38 @@
         max-width: 180px;
     }
 
-    .widget-title {
+    /* .widget-title {
         text-transform: capitalize;
-    }
+    } */
 
     .footer-top .widget-title {
+        padding-top: 5px !important;
         color: #ffffff;
         margin-bottom: 40px;
     }
 
-    .courses-link-list li+li {
-        margin-top: 10px;
-    }
-
-    .courses-link-list li a {
-        color: #ffffff;
-        text-transform: capitalize;
-        font-family: var(--para-font);
-        font-weight: 400;
-    }
-
-    .courses-link-list li a:hover {
-        color: #ffb606;
-    }
-
-    .courses-link-list li i {
-        margin-right: 5px;
-    }
+   
 
     .footer-top .small-post-title a {
         font-family: var(--para-font);
         color: #ffffff;
         font-weight: 400;
     }
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section {
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
 
     .small-post-item .post-date {
         color: #ffb606;
@@ -175,39 +133,11 @@
         margin-top: 30px;
     }
 
-    .news-letter-form {
-        margin-top: 15px;
-    }
-
-    .news-letter-form input {
-        width: 100%;
-        padding: 12px 25px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border: none;
-    }
-
-    .news-letter-form input[type="submit"] {
-        width: auto;
-        border: none;
-        background-color: #ffb606;
-        padding: 9px 30px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        color: #ffffff;
-        margin-top: 10px;
-    }
-
+    
     .footer-bottom {
         padding: 23px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.149);
-    }
+    } 
 
     .copy-right-text {
         color: #ffffff;
@@ -217,32 +147,7 @@
         color: #ffb606;
     }
 
-    .terms-privacy li+li {
-        margin-left: 30px;
-    }
-
-    .terms-privacy li a {
-        color: #ffffff;
-        position: relative;
-    }
-
-    .terms-privacy li a:after {
-        position: absolute;
-        content: '-';
-        color: #ffffff;
-        display: inline-block;
-        top: 0;
-        right: -18px;
-    }
-
-    .terms-privacy li+li a:after {
-        display: none;
-    }
-
-    .courses-link-list li a:hover,
-    .courses-link-list li a:focus {
-        text-decoration: none;
-    }
+   
 
     /* Default styling for larger screens */
 
@@ -256,40 +161,28 @@
         .copy-right-text {
             display: none;
         }
+        .footer-top .site-logo {
+            padding-top: 0rem !important;
+        margin-bottom: 5px;
+        display: block;
+        max-width: 80px;
+    }
+    .footer-top {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        
+    }
+    .body{
+        overflow-y: hidden;
+    }
+    
     }
 
-    div>h1 {
-        text-transform: capitalize;
-        letter-spacing: 0.8px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 900;
-        font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
-        background-color: #FCA311;
-        background-image: linear-gradient(45deg, #FCA311, #700691);
-        background-size: 100%;
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-    }
-
-    h4 {
-        font-size: 15px;
-        font-stretch: expanded;
-        color: #ef9797;
-        line-height: 100%;
-    }
-
-    h5 {
-        font-size: 20px;
-        font-stretch: expanded;
-        color: #fca311;
-        line-height: 100%;
-    }
+    
 
     .container {
         width: 100%;
+        height: 100%;
         margin: auto;
     }
 </style>
@@ -303,44 +196,29 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="widget company-intro-widget">
                             <a href="index.html" class="site-logo" target="_parent">
                                 <br>
                                 <img src="src/img/logo.png" alt="logo">
                             </a>
 
-                            <p>Dayananda Sagr University<br> Main Cmapus<br> Devarakaggalahalli, Harohalli<br> Bengaluru
+                            
+                        </div>
+                    </div>
+                    <!-- widget end -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget course-links-widget">
+                            <p>Dayananda Sagar University<br> Main Cmapus<br> Devarakaggalahalli, Harohalli<br> Bengaluru
                                 – 562 112</p>
                             <ul class="company-footer-contact-list">
 
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- widget end -->
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="widget course-links-widget">
-                            <h5 class="widget-title" style="font-family: 'Roboto', sans-serif;">Quick links</h5>
-
-                            <ul class="courses-link-list">
-                                <li><a href="index.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>Home</a></li>
-                                <li><a href="index.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>About us</a></li>
-                                <li><a href="team2023.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>Team</a></li>
-                                <li><a href="contact-us.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>Contact</a></li>
-                                <li><a href="comp.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>Achievements</a></li>
-                                <li><a href="rovers.html" target="_parent"><i
-                                            class="fas fa-long-arrow-alt-right"></i>Rovers</a></li>
-                            </ul>
+                            </ul>                            
 
                         </div>
-                    </div>
+                    </div> 
                     <!-- widget end -->
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="widget latest-news-widget">
                             <h5 class="widget-title">phone</h5>
                             <ul class="small-post-list">
@@ -384,19 +262,7 @@
                         </div>
                     </div>
                     <!-- widget end -->
-                    <!--<div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="widget newsletter-widget">
-                            <h5 class="widget-title">We'd Love to hear from you</h5>
-                            <div class="footer-newsletter">
-                                <p>Stay in the loop for future MRT news!</p>
-                                <form class="news-letter-form">
-                                    <input type="email" name="news-email" id="news-email" placeholder="Your email address">
-                                    <input type="submit" value="Send">
-                                </form>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- widget end -->
+                    
                 </div>
             </div>
         </div>

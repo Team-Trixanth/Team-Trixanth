@@ -114,7 +114,7 @@
     }
     
     .comp-text {
-        width: 80% !important;
+        width: 100% !important;
         color: #ffffff;
         font-weight: 400;
         font-size: 15px;
@@ -126,6 +126,21 @@
         font-size: 25px;
         line-height: 21px;
     }
+    .comp-text {
+        background-color: rgba(87, 48, 48, 0.404);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 6%;
+        color: aliceblue;
+        padding-bottom: 1%;
+        font-family: Relative, sans-serif;
+        font-style: normal;
+        font-weight: 400;        
+        width: 100%;
+        margin-left: 0vh;
+        margin-top: 15vh;
+        margin-right: 0vh;
+    }
     
 }
 
@@ -133,7 +148,7 @@
     background: linear-gradient(180deg, #666666, #a46955, #a23b12);
     color: white;
     text-align: center;
-    padding: 5% 0;
+    padding: 0% 0;
 }
 
 .comp h1 {
