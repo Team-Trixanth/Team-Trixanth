@@ -59,18 +59,26 @@
                 /* Stacks the elements vertically */
                 align-items: flex-start;
                 /* Aligns items to the left */
+                /* box-sizing: border-box; */
+                margin: 1px !important;
+                padding-left: 0.1%;
+                padding-top: 0.1%;
             }
 
             .introduction {
+                gap: 10px;
                 flex-direction: column;
+                padding-left: 2%;
+                padding-right: 2%;
                 /* Stacks the heading and paragraph vertically */
             }
 
             .introduction h2,
             .introduction p {
                 padding: 0;
+
                 /* Removes side padding for smaller screens */
-                text-align: left;
+                text-align:justify;
                 /* Aligns text to the left */
             }
         }
@@ -247,10 +255,7 @@
             <div class="container">
                 <div class="padding-vertical-xxlarge">
                     <div class="timeline-hero_heading-wrapper">
-                        <!-- <h1>Sponsorship Proposal</h1> -->
-                        <!-- <div class="margin-bottom-medium">
-                            <h4>Team  TRIXANTH</h4>
-                        </div> -->
+                        
                         <div id="introduction" class="bg-image">
                             <div class="introduction animate">
                                 <h2>INTRODUCTION</h2>
