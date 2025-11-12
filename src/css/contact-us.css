@@ -10,15 +10,15 @@ body {
     line-height: 1.5;
 }
 
+/* Contact hero (top banner) */
 .contact-bg {
-    padding-top: 15vh;
-    height: 50vh;
-    background: linear-gradient(#481f19, #481f19), url(../img/contact-image/contact-bg.jpg);
+    padding-top: 8vh;
+    height: 28vh;
+    background: linear-gradient(180deg, #000000, rgba(47, 47, 47, 0.574));
     background-position: 50% 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     text-align: center;
-    color: wheat;
+    color: #e8e8e8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,15 +26,15 @@ body {
 }
 
 .contact-bg h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
 .contact-bg h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    padding: 0.4rem 0;
-    letter-spacing: 4px;
+    padding: 0.25rem 0;
+    letter-spacing: 3px;
 }
 
 .line div {
@@ -43,9 +43,9 @@ body {
 
 .line div:nth-child(1),
 .line div:nth-child(3) {
-    height: 3px;
-    width: 70px;
-    background: wheat;
+    height: 2px;
+    width: 50px;
+    background: #000000;
     border-radius: 5px;
 }
 
@@ -55,9 +55,9 @@ body {
 }
 
 .line div:nth-child(2) {
-    width: 10px;
-    height: 10px;
-    background: wheat;
+    width: 8px;
+    height: 8px;
+    background: #000000;
     border-radius: 50%;
 }
 
@@ -70,19 +70,18 @@ body {
     margin: 1.6rem 0;
 }
 
+/* Contact body */
 .contact-body {
-    /* max-width: 1320px; */
-    background: wheat;
-/* margin: 0 auto; */
-    /* /padding: 0 1rem; */
-    margin-bottom: 0; /* Remove any bottom margin */
-    padding-bottom: 0;
+    background: rgb(49, 48, 48);
+    color: #e2e2e2;
+    margin-bottom: 0;
+    padding: 20px 16px;
 }
 
 .contact-info {
-    margin: 0 0;
+    margin: 0 auto;
     text-align: center;
-    padding: 2rem 0;
+    padding: 16px 0;
 }
 
 .contact-info span {
@@ -90,49 +89,62 @@ body {
 }
 
 .contact-info div {
-    margin: 0.8rem 0;
-    padding: 1rem;
-    color: #481f19;
+    margin: 8px 0;
+    padding: 14px;
+    color: #e2e2e2;
+    background: rgba(58, 36, 36, 0.04);
+    border: 1px solid #2f1f17;
+    border-radius: 10px;
 }
 
 .contact-info span .fas {
-    font-size: 2rem;
-    padding-bottom: 0.9rem;
-    color: #481f19;
+    font-size: 1.6rem;
+    padding-bottom: 0.6rem;
+    color: #bbbbbb;
 }
 
 .contact-info div span:nth-child(2) {
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .contact-info .text {
-    padding-top: 0.4rem;
+    padding-top: 0.2rem;
 }
 
+/* Embedded form wrapper */
 .contact-form {
-    padding: 2rem 0;
-    border-top: 1px solid #481f19;
+    padding: 16px 0 0 0;
+    border-top: 1px solid #1f1f1f;
 }
 
 .contact-form form {
     padding-bottom: 1rem;
 }
 
+/* Inputs */
 .form-control {
     width: 100%;
-    border: 1.5px solid #481f19;
-    border-radius: 5px;
-    padding: 0.7rem;
-    margin: 0.6rem 0;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    margin: 0.5rem 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    outline: 0;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .form-control:focus {
-    box-shadow: 0 0 6px -3px #481f19;
+    border-color: #ffffff;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 0 2px rgba(157, 97, 48, 0.716) inset, 0 0 0 2px rgba(255,255,255,0.12);
+    outline: 2px solid rgba(255,255,255,0.35);
 }
+
+.form-control::placeholder { color: rgba(255,255,255,0.7); }
 
 .contact-form form div {
     display: grid;
@@ -140,21 +152,22 @@ body {
     column-gap: 0.6rem;
 }
 
+/* Submit button */
 .send-btn {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    color: #fff;
-    background: #481f19;
+    color: #000000;
+    background: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 
 .send-btn:hover {
-    opacity: 0.8;
+    background: #f2f2f2;
 }
 
 .contact-form>div img {
@@ -166,18 +179,17 @@ body {
     text-align: center;
 }
 
+/* Footer strip for contact page */
 .contact-footer {
-    /* padding: 2rem 0; */
-    background: #481f19;
-    height: 100%;
-    /* margin-top: ; Ensure no extra margin */
-    padding-top: 2rem; 
+    background: #2e2c2c;
+    height: auto;
+    padding: 16px 0; 
 }
 
 .contact-footer h3 {
-    font-size: 1.3rem;
-    color: wheat;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #d8d8d8;
+    margin-bottom: 0.6rem;
     text-align: center;
 }
 
@@ -188,54 +200,39 @@ body {
 
 .social-links a {
     text-decoration: none;
-    width: 40px;
-    height: 40px;
-    color: wheat;
-    border: 2px solid wheat;
+    width: 36px;
+    height: 36px;
+    color: #d8d8d8;
+    border: 1px solid #2a2a2a;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.4rem;
-    transition: all 0.4s ease;
+    margin: 0.3rem;
+    transition: all 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #c01616;
-    border-color: #c01616;
+    color: #111;
+    background: #d8d8d8;
+    border-color: #d8d8d8;
 }
 
+/* Responsive tweaks */
 @media screen and (max-width: 768px) {
-    .contact-bg .text {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .contact-bg .text { width: 85%; margin-left: auto; margin-right: auto; }
     .contact-info {
         display: flex;
-        
-        align-items: center; /* Center align items */
-        
-        flex-direction: column !important; /* Change direction to column */
-        gap: 20px; 
-        /* display: grid;
-        grid-template-columns: repeat(0, 1fr) !important; */
+        align-items: center;
+        flex-direction: column !important;
+        gap: 12px; 
     }
 }
 
 @media screen and (max-width: 992px) {
-    .contact-bg .text {
-        width: 50%;
-    }
-    .contact-form {
-        display: grid;
-        grid-template-columns: repeat(, 1fr);
-        align-items: center;
-    }
+    .contact-bg .text { width: 65%; }
 }
 
 @media screen and (max-width: 1200px) {
-    .contact-info {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    .contact-info { grid-template-columns: unset; }
 }

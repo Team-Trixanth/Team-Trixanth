@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trixanth</title>
+    <title>Trixanth - Engineering Dreams, Exploring Worlds | Dayananda Sagar University</title>
+    <meta name="description" content="Team Trixanth is a passionate team of students from Dayananda Sagar University working on innovative rover technology for the International Rover Challenge. Join us in exploring space robotics.">
+    <meta name="keywords" content="Trixanth, rover, space robotics, International Rover Challenge, Dayananda Sagar University, team, competition, robotics">
+    <meta name="author" content="Team Trixanth">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Trixanth - Engineering Dreams, Exploring Worlds">
+    <meta property="og:description" content="Team Trixanth: Passionate students building innovative rover technology for space exploration.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./src/img/logo.png">
     <link rel="icon" type="image/x-icon" href="./src/img/logo.png">
     <link rel="stylesheet" href="./src/css/other/font-awesome.min.css">
     <link rel="stylesheet" href="./src/css/other/bootstrap.min.css">
@@ -78,9 +86,9 @@
 <body data-barba="wrapper">
     <div id="preloader-container">
         <video id="preloader-video" autoplay muted loop>
-      <source src="welcome - Trim.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+            <source src="preloder.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
 
@@ -206,12 +214,38 @@
                 text-align: center; /* Center align menu items */
             }
     
-                @media only screen and (max-width: 600px) {
+                @media only screen and (max-width: 768px) {
+                    header {
+                        padding: 0 15px;
+                    }
+                    
                     header nav {
                         display: none;
                     }
+                    
                     #hamburger-icon {
                         display: block;
+                    }
+                    
+                    #brand img {
+                        width: 50px;
+                    }
+                    
+                    .mobile-menu {
+                        top: 70px;
+                        padding-top: 20px;
+                    }
+                    
+                    .mobile-menu li a {
+                        display: block;
+                        padding: 15px 20px;
+                        font-size: 18px;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .mobile-menu li a:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        padding-left: 30px;
                     }
                 }
             </style>
@@ -220,6 +254,18 @@
                 function toggleMobileMenu(menu) {
                     menu.classList.toggle('open');
                 }
+                
+                // Close mobile menu when a link is clicked
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+                    const hamburgerIcon = document.getElementById('hamburger-icon');
+                    
+                    mobileMenuLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            hamburgerIcon.classList.remove('open');
+                        });
+                    });
+                });
             </script>
     
             <div id="brand"><a href="/">
@@ -230,8 +276,18 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="rovers.html">Sponsorship</a></li>
                     <!-- <li ><a href="div.html">Divisions</a></li> -->
-                    <li ><a href="team2023.html">Team</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Team 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="team2025.html">Team 2025</a>
+                          <a href="team2023.html">Team 2024</a>
+                        </div>  
+                    <!-- <li ><a href="team2023.html">Team</a></li> -->
+                    </div>
                     <li><a href="comp.html">Competitions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact-us.html">Contact</a></li>
                     
                     
@@ -245,8 +301,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="rovers.html">Sponsorship</a></li>
                     <!-- <li><a href="div.html">Divisions</a></li> -->
-                    <li><a href="team2023.html">Team</a></li>                
+                    <li><a href="team2025.html">Team 2025</a></li>
+                    <li><a href="team2023.html">Team 2024</a></li>                
                     <li><a href="comp.html">Competitions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact-us.html">Contact</a></li>
                     
                 </ul>
@@ -300,7 +358,7 @@
             </div>
             <div>
                 <div class="footer">
-                    <iframe src="footer.html" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="footer.html" width="100%" height="360px" frameborder="0" scrolling="no" style="background:#000"></iframe>
                 </div>
 
                  <!-- Add some styles to ensure the iframe doesn't disrupt the layout  -->
@@ -310,8 +368,8 @@
 
                     .iframe-container {
                         position: relative;
-                        padding-top: 75.25%;
-                        /* Adjust this value based on the aspect ratio of your iframe content */
+                        padding-top: 56.25%; /* 16:9 aspect ratio */
+                        overflow: hidden;
                     }
 
                     .event-iframe {
@@ -323,36 +381,22 @@
                         border: 0;
                     }
 
-                    /* Add a media query for smaller screens (adjust max-width as needed) */
-
-                    @media (max-width: 768px) {
-                        .iframe-container {
-                            padding-top: 120%;
-                            /* Adjust this value for a different aspect ratio on smaller screens */
-                        }
-                        .event-iframe {
-                            height: 100%;
-                            /* Adjust height as needed for smaller screens */
-                        }
-                    }
-                    @media (max-width: 600px) {
-                        .iframe-container {
-                            padding-top: 120% !important;
-                            /* Adjust this value for a different aspect ratio on smaller screens */
-                        }
-                        .event-iframe {
-                            height: 100% !important;
-                            /* Adjust height as needed for smaller screens */
-                        }
-                    }
+                    /* Add a media query for smaller screens */
                     @media (max-width: 1100px) {
                         .iframe-container {
-                            padding-top: 100%;
-                            /* Adjust this value for a different aspect ratio on smaller screens */
+                            padding-top: 70%;
                         }
-                        .event-iframe {
-                            height: 100%;
-                            /* Adjust height as needed for smaller screens */
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .iframe-container {
+                            padding-top: 80%;
+                        }
+                    }
+                    
+                    @media (max-width: 600px) {
+                        .iframe-container {
+                            padding-top: 90%;
                         }
                     }
                 </style>
@@ -403,6 +447,25 @@
 
         const hiddenElements = document.querySelectorAll('.animate')
         hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+    <script>
+        // Dropdown toggle script
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropbtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior if any
+            dropdownContent.classList.toggle('show');
+        });
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     

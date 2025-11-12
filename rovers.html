@@ -60,32 +60,319 @@
         @media (max-width: 768px) {
             #introduction {
                 flex-direction: column;
-                /* Stacks the elements vertically */
                 align-items: flex-start;
-                /* Aligns items to the left */
-                /* box-sizing: border-box; */
-                margin: 1px !important;
-                padding-left: 0.1%;
-                padding-top: 0.1%;
+                margin: 10px !important;
+                padding: 0;
             }
 
             .introduction {
                 gap: 10px;
                 flex-direction: column;
-                padding-left: 2%;
-                padding-right: 2%;
-                /* Stacks the heading and paragraph vertically */
+                padding: 15px;
+                margin: 10px;
+                width: calc(100% - 40px);
             }
 
-            .introduction h2,
-            .introduction p {
-                padding: 0;
+            .introduction h2 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
 
-                /* Removes side padding for smaller screens */
-                text-align:justify;
-                /* Aligns text to the left */
+            .introduction p {
+                font-size: 14px;
+                line-height: 1.6;
+                text-align: justify;
+            }
+            
+            .logo {
+                height: 60px;
+            }
+            
+            .sponsorsLogo {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
             }
         }
+        /* Logo Container */
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-30px); /* Start off-screen */
+    animation: slideIn 0.6s ease forwards; /* Staggered via JS */
+}
+
+/* Tier-Specific Logo Sizes */
+.gold-tier .logo {
+    width: 300px; /* Bigger for Gold */
+}
+
+.silver-tier .logo {
+    width: 150px; /* Medium for Silver */
+}
+
+.bronze-tier .logo {
+    width: 90px; /* Smaller for Bronze */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 215, 0, 0.5)); /* Gold shine effect */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Respect reduced motion */
+/* @media (prefers-reduced-motion: reduce) {
+    .logo, .sponsor-tier, .sponsors-header h1 {
+        animation: none;
+        transition: none;
+    }
+} */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .our_sponsors {
+        padding: 10px;
+    }
+    
+    .sponsors-header h1 {
+        font-size: 2em;
+    }
+    
+    .sponsor-tier {
+        padding: 15px;
+    }
+    
+    .sponsor-tier h2 {
+        font-size: 1.5em;
+    }
+    
+    .logos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Adjusted sizes for mobile */
+    .gold-tier .logo {
+        width: 220px; /* Slightly smaller on mobile */
+    }
+    
+    .silver-tier .logo {
+        width: 120px;
+    }
+    
+    .bronze-tier .logo {
+        width: 70px;
+    }
+    
+    .logo {
+        animation-duration: 0.4s; /* Faster on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .sponsor-tier h2 {
+        font-size: 1.3em;
+    }
+    
+    /* Further reduced sizes for very small screens */
+    .gold-tier .logo {
+        width: 200px;
+    }
+    
+    .silver-tier .logo {
+        width: 100px;
+    }
+    
+    .bronze-tier .logo {
+        width: 60px;
+    }
+}
+
+    </style>
+    <style>
+        /* General Styles */
+.our_sponsors {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    overflow: hidden; /* Prevent overflow during animations */
+}
+
+.sponsors-header h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.sponsors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sponsor-tier {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.sponsor-tier:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sponsor-tier h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tier-Specific Backgrounds */
+.gold-tier {
+    background-color: #000000;
+    color: #333;
+}
+
+.silver-tier {
+    background-color: #000000;
+    color: #333;
+}
+
+.bronze-tier {
+    background-color: #000000;
+    color: #333;
+}
+
+/* Logo Container */
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-30px); /* Start off-screen */
+    animation: slideIn 0.6s ease forwards; /* Staggered via JS */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1) drop-shadow(0 0 10px rgba(248, 186, 86, 0.5)); /* Gold shine effect */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .logo, .sponsor-tier, .sponsors-header h1 {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .our_sponsors {
+        padding: 10px;
+    }
+    
+    .sponsors-header h1 {
+        font-size: 2em;
+    }
+    
+    .sponsor-tier {
+        padding: 15px;
+    }
+    
+    .sponsor-tier h2 {
+        font-size: 1.5em;
+    }
+    
+    .logos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo {
+        width: 80px;
+        animation-duration: 0.4s; /* Faster on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .sponsor-tier h2 {
+        font-size: 1.3em;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+}
     </style>
 </head>
 
@@ -211,12 +498,38 @@
                 text-align: center; /* Center align menu items */
             }
 
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 768px) {
+                header {
+                    padding: 0 15px;
+                }
+                
                 header nav {
                     display: none;
                 }
+                
                 #hamburger-icon {
                     display: block;
+                }
+                
+                #brand img {
+                    width: 50px;
+                }
+                
+                .mobile-menu {
+                    top: 70px;
+                    padding-top: 20px;
+                }
+                
+                .mobile-menu li a {
+                    display: block;
+                    padding: 15px 20px;
+                    font-size: 18px;
+                    transition: all 0.3s ease;
+                }
+                
+                .mobile-menu li a:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    padding-left: 30px;
                 }
             }
         </style>
@@ -225,6 +538,18 @@
             function toggleMobileMenu(menu) {
                 menu.classList.toggle('open');
             }
+            
+            // Close mobile menu when a link is clicked
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburgerIcon.classList.remove('open');
+                    });
+                });
+            });
         </script>
 
         <div id="brand"><a href="/">
@@ -235,8 +560,18 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li ><a href="div.html">Divisions</a></li> -->
-                <li ><a href="team2023.html">Team</a></li>
+                <div class="dropdown">
+                        <button class="dropbtn">Team 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="team2025.html">Team 2025</a>
+                          <a href="team2023.html">Team 2024</a>
+                        </div>  
+                    <!-- <li ><a href="team2023.html">Team</a></li> -->
+                    </div>
                 <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 
                 
@@ -250,8 +585,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li><a href="div.html">Divisions</a></li> -->
-                <li><a href="team2023.html">Team</a></li>                
+                <li><a href="team2025.html">Team 2025</a></li>
+                <li><a href="team2024.html">Team 2024</a></li>                
                 <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 
             </ul>
@@ -269,7 +606,7 @@
                         
                         <div id="introduction" class="bg-image">
                             <div class="introduction animate">
-                                <h2>INTRODUCTION</h2>
+                                <!-- <h2>INTRODUCTION</h2> -->
                                 <p>Team Trixanth invites you to be part of an
                                     extraordinary journey to shape the future of
 
@@ -282,14 +619,7 @@
                                     your brand as a pioneer in supporting
                                     cutting-edge technology and young
                                     innovators.
-                                    Proud Achievement: Team Trixanth has
-                                    been selected to participate in the final
-                                    round of the prestigious International Rover
-                                    Challenge, a global platform showcasing the
-                                    best of robotics and space exploration
-                                    technology. This recognition highlights the
-                                    team’s innovation and commitment to
-                                    excellence.
+                                    
                                 </p>
                                 <br>
                             </div>
@@ -303,129 +633,164 @@
         </div>
 
         <div class="section-timeline-heading">
-            <div class="container">
-                <div class="padding-vertical-xlarge">
-                    <div class="timeline-main_heading-wrapper">
-                        <div class="margin-bottom-medium">
-                            <h2>Sponsorship
-                                Package</h2>
-                        </div>
+        <div class="container">
+            <div class="padding-vertical-xlarge">
+                <div class="timeline-main_heading-wrapper">
+                    <div class="margin-bottom-medium">
+                        <h2>Sponsorship Packages</h2>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="section-timeline">
-            <div class="container ">
-                <!-- w-no-margin-left -->
-                <div class="timeline_component ">
-                    <div class="timeline_progress">
-                        <div data-w-id="d5abcf1f-3370-3eea-ccfd-66f076babfdd" class="timeline_progress-bar"></div>
+    <div class="section-timeline">
+        <div class="container">
+            <div class="timeline_component">
+
+                <!-- Bronze Tier -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Bronze</div>
                     </div>
-                    <div data-w-id="d5abcf1f-3370-3eea-ccfd-66f076babfe0" class="timeline_item">
-                        <div id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe1-8257968a" class="timeline_left">
-                            <div class="timeline_date-text">Moon</div>
-                        </div>
-                        <div id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe4-8257968a" class="timeline_centre">
-                            <div class="timeline_circle"></div>
-                        </div>
-                        <div id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe6-8257968a" class="timeline_right">
-                            <div class="margin-bottom-xlarge">
-                            </div>
-                            <div class="timeline_image-wrapper"><img src="src/images/moon.png" loading="lazy"
-                                    width="250" sizes="(max-width: 250px) 48px, (max-width: 250px) 64px, 36vw" alt="" />
-                            </div>
-                            <br>
-                            <div class="timeline_text"> Logo placement on
-                                event banners <br><br> Acknowledgment in
-                                all social media
-                                posts. <br><br> Mention in
-                                Presentations </div>
-                            <div>
-                                <br>
-                                <h1
-                                    style="background-color: wheat; text-align:center; display: inline-block; padding: 10px; border-radius: 25px; font-size:25px;">
-                                    25000 ₹</h1>
-                            </div>
-
-                        </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle" style="background-color: #cd7f32;"></div>
                     </div>
-                    <div data-w-id="0488106f-ce92-9b7b-01c3-8ad75f3f5e35" class="timeline_item">
-                        <div id="w-node-_0488106f-ce92-9b7b-01c3-8ad75f3f5e36-8257968a" class="timeline_left">
-                            <div class="timeline_date-text">Planet</div>
+                    <div class="timeline_right">
+                        <div class="timeline_image-wrapper">
+                            <img src="src/images/bronze_sponsor.png" width="300" alt="Bronze Sponsorship">
                         </div>
-                        <div id="w-node-_0488106f-ce92-9b7b-01c3-8ad75f3f5e39-8257968a" class="timeline_centre">
-                            <div class="timeline_circle"></div>
+                        <div class="timeline_text">
+                            <b>Up to ₹10,000</b><br><br>
+                            • Small logo on website, event banners, and social media posts.<br><br>
+                            • Recognition on LinkedIn and Instagram.<br><br>
+                            
                         </div>
-                        <div class="timeline_right">
-                            <div class="margin-bottom-medium">
-                            </div>
-                            <div class="timeline_image-wrapper"><img src="src/images/planet.png" loading="lazy"
-                                    width="380" sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, 36vw" alt="" />
-                            </div>
-                            <br>
-                            <div class="timeline_text">Moon+<br><br> Mid-sized logo on the
-                                rover.<br><br> Priority access to
-                                team interaction
-                                sessions. <br /></div>
-                            <div>
-                                <br>
-                                <h1
-                                    style="background-color: wheat; text-align:center; display: inline-block; padding: 10px; border-radius: 25px; font-size:25px;">
-                                    50000 ₹</h1>
-                            </div>
-
+                        <div>
+                            <h1 style="background-color: #cd7f32; color:black; text-align:center; display:inline-block; padding:10px; border-radius:25px; font-size:25px;">
+                                ₹10,000
+                            </h1>
                         </div>
-                    </div>
-                    <div data-w-id="5b7ae63b-6f00-e542-a023-96ea5c4a96e3" class="timeline_item">
-                        <div id="w-node-_5b7ae63b-6f00-e542-a023-96ea5c4a96e4-8257968a" class="timeline_left">
-                            <div class="timeline_date-text">Star</div>
-                        </div>
-                        <div id="w-node-_5b7ae63b-6f00-e542-a023-96ea5c4a96e7-8257968a" class="timeline_centre">
-                            <div class="timeline_circle"></div>
-                        </div>
-                        <div class="timeline_right">
-                            <div class="margin-bottom-medium">
-                            </div>
-                            <div class="timeline_image-wrapper"><img src="src/images/Star.png" loading="lazy"
-                                    width="300" sizes="(max-width: 300px) 48px, (max-width: 300px) 64px, 36vw" alt="" />
-                            </div>
-                            <div class="timeline_text">Planet+ <br><br> Premium logo
-                                placement on the
-                                rover <br><br> Logo on and
-                                merchandise<br><br> Interaction with
-                                University Students <br /></div>
-                            <div>
-                                <br>
-                                <h1
-                                    style="background-color:wheat; text-align:center; display: inline-block; padding: 10px; border-radius: 25px; font-size:25px;">
-                                    100000 ₹</h1>
-                            </div>
-
-                        </div>
-
-
-
-
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="our_sponers">
-            <div class="introduction animate" style="margin: 0;">
-                <h2>OUR SPONSORS</h2>
-                <div class="sponsorsLogo">
-                    <img class="logo" src="src/images/logo (1).png" alt="sponsorsLogo">
-                    <img class="logo" src="src/images/dassaultLogo.png" alt="sponsorsLogo">
-                    <img class="logo" src="src/images/csst logo.png" alt="sponsorsLogo">
+                <!-- Silver Tier -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Silver</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle" style="background-color: #c0c0c0;"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline_image-wrapper">
+                            <img src="src/images/silver_sponsor.png" width="270" alt="Silver Sponsorship">
+                        </div>
+                        <div class="timeline_text">
+                            <b>Up to ₹15,000</b><br><br>
+                            • Medium-sized logo on website, banners, and social media.<br><br>
+                            • Priority mentions in LinkedIn & Instagram posts.<br><br>
+                            • Interaction opportunities with university students for event collaborations or workshops.
+                        </div>
+                        <div>
+                            <h1 style="background-color: #c0c0c0; color:black; text-align:center; display:inline-block; padding:10px; border-radius:25px; font-size:25px;">
+                                ₹15,000
+                            </h1>
+                        </div>
+                    </div>
                 </div>
-                <br>
+
+                <!-- Gold Tier -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Gold</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle" style="background-color: #d3af2d;"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline_image-wrapper">
+                            <img src="src/images/gold_sponsor.png" width="300" alt="Gold Sponsorship">
+                        </div>
+                        <div class="timeline_text">
+                            <b>Above ₹15,000</b><br><br>
+                            • Prominent logo placement on banners, website, social media, and rover body.<br><br>
+                            • Featured sponsor spotlight in social media campaigns.<br><br>
+                            • Direct engagement with university students for events, mentoring, and workshops.<br><br>
+                            • Recognition as an official “Gold Technical Partner” of Team Trixanth.
+                        </div>
+                        <div>
+                            <h1 style="background-color: #d3af2d; color:black; text-align:center; display:inline-block; padding:10px; border-radius:25px; font-size:25px;">
+                                ₹15,000+
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Sponsorship -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Technical Sponsorship</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle" style="background-color: #8e1b1b;"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline_image-wrapper">
+                            <img src="src/images/tecnical_sponsor.png" width="280" alt="Technical Sponsorship">
+                        </div>
+                        <div class="timeline_text">
+                            • Support us through hardware, components, software tools, or domain expertise.<br><br>
+                            • Recognition as an official <b>Technical Partner</b> on website, banners, and posts.<br><br>                            
+                            • Involvement in student development sessions.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
+    <div class="our_sponsors">
+        <h1>OUR SPONSORS</h1>
+        <div class="sponsors-header animate-on-scroll">
+            
+        </div>
+        <div class="sponsors-container">
+            <!-- Gold Sponsors -->
+            <div class="sponsor-tier gold-tier animate-on-scroll">
+                <!-- <h2>Gold Sponsors</h2> -->
+                <div class="logos">
+                    <img class="logo animate-stagger" src="src/images/logo (1).png" alt="DSU Logo">
+                    <img class="logo animate-stagger" src="src/images/dassaultLogo.png" alt="Dassault Logo">
+                    <img class="logo animate-stagger" src="src/images/csst logo.png" alt="CSST Logo">
+                    <img class="logo animate-stagger" src="src/images/Vaidyuthi-Logo-web-1.png" alt="Vaidyuthi Modalities Logo">
+                </div>
+            </div>
+            <!-- Silver Sponsors -->
+            <!-- <div class="sponsor-tier silver-tier animate-on-scroll">
+                <h2>Silver Sponsors</h2>
+                <div class="logos">
+                    <img class="logo animate-stagger" src="src/images/logo (1).png" alt="DSU Logo">
+                    <img class="logo animate-stagger" src="src/images/dassaultLogo.png" alt="Dassault Logo">
+                    <img class="logo animate-stagger" src="src/images/csst logo.png" alt="CSST Logo">
+                    <img class="logo animate-stagger" src="src/images/Vaidyuthi-Logo-web-1.png" alt="Vaidyuthi Modalities Logo">
+                </div>
+            </div> -->
+            <!-- Bronze Sponsors -->
+            <!-- <div class="sponsor-tier bronze-tier animate-on-scroll">
+                <h2>Bronze Sponsors</h2>
+                <div class="logos">
+                    <img class="logo animate-stagger" src="src/images/logo (1).png" alt="DSU Logo">
+                    <img class="logo animate-stagger" src="src/images/dassaultLogo.png" alt="Dassault Logo">
+                    <img class="logo animate-stagger" src="src/images/csst logo.png" alt="CSST Logo">
+                    <img class="logo animate-stagger" src="src/images/Vaidyuthi-Logo-web-1.png" alt="Vaidyuthi Modalities Logo">
+                </div>
+            </div>  -->
+        </div>
+    </div>
 
         <div class="footer">
-            <iframe src="footer.html" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+            <iframe src="footer.html" width="100%" height="360px" frameborder="0" scrolling="no" style="background:#000"></iframe>
         </div>
 
         <div class="loader-wrapper">
@@ -470,6 +835,48 @@
             type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
         <script src="src/js/rover.js"></script>
+
+        <script>
+        // Dropdown toggle script
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropbtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior if any
+            dropdownContent.classList.toggle('show');
+        });
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
+    </script>
+    <script>
+    // Scroll-triggered animations using Intersection Observer
+    const observerOptions = {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // Start animation slightly before fully in view
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add delay for staggered effect
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 200); // 200ms delay between elements
+            }
+        });
+    }, observerOptions);
+    // Observe elements
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    // Stagger logos within each tier
+    document.querySelectorAll('.animate-stagger').forEach((logo, index) => {
+        logo.style.animationDelay = `${index * 0.2}s`; // 0.2s delay per logo
+    });
+</script>
 </body>
 
 </html>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trixanth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./src/img/logo.png">
     <link rel="stylesheet" href="./src/css/other/font-awesome.min.css">
     <link rel="stylesheet" href="./src/css/other/bootstrap.min.css">
@@ -25,223 +29,568 @@
     <script src="./src/js/jquery.min.js"></script>
     <script src="./src/js/jquery-3.6.3.min.js"></script>
     <style>
-        *{
-            text-align: justify;
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('src/img/team\ photo\ .jpeg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(253, 208, 140, 0.1);
+            animation: pulse 3s infinite;
+        }
+        .header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(253, 208, 140, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .header p {
+            font-size: 1.3em;
+            margin: 15px 0;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .competition {
+            background: linear-gradient(135deg, #e7e5e537, #ffffff00);
+            /* background-image: url('src/img/team\ photo\ .jpeg'); */
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(253, 208, 140, 0.3);
+            border: 1px solid rgba(253, 208, 140, 0.2);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+        .competition:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(253, 208, 140, 0.5);
+            border-color: rgba(253, 208, 140, 0.5);
+        }
+        .competition h2 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: #CFB997;
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(253, 208, 140, 0.5);
+        }
+        
+        .competition p {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #c0c0c0;
+        }
+        .journey {
+            margin-top: 40px;
+        }
+        .journey h3 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #CFB997;
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(253, 208, 140, 0.3);
+        }
+        .achievement {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(253, 208, 140, 0.2);
+            transition: all 0.3s ease;
+        }
+        .achievement:hover {
+            background: rgba(253, 208, 140, 0.1);
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+        .achievement:last-child {
+            border-bottom: none;
+        }
+        .achievement .year {
+            font-weight: bold;
+            color: #CFB997;
+            font-size: 1.4em;
+            min-width: 70px;
+            text-shadow: 0 0 5px rgba(113, 93, 31, 0.5);
+        }
+        .achievement .details {
+            flex: 1;
+            margin-left: 25px;
+            font-size: 1.1em;
+            color: #e0e0e0;
+        }
+        .summary {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #CFB997;
+            font-size: 1.3em;
+            text-shadow: 0 0 10px rgba(253, 208, 140,, 0.5);
+        }
+        .comp-gallery {
+            background-color: #0a0a0a;
+            padding: 80px 20px;
+        }
+        .comp-gallery h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #CFB997;
+        }
+        .comp-gallery > div > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .comp-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        .comp-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .comp-gallery .view-gallery {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .comp-gallery .view-gallery a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: transparent;
+            color: #CFB997;
+            text-decoration: none;
+            border: 2px solid #CFB997;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .comp-gallery .view-gallery a:hover {
+            background: #CFB997;
+            color: #000;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(253, 208, 140, 0.647);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(253, 208, 140, 0.8), 0 0 40px rgba(253, 208, 140, 0.6);
+            }
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        /* Navbar styles */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000000;
+            
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+        header a {
+            text-decoration: none;
+        }
+        header {
+            padding: 0 30px;
+            background-color: #000000;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            position: relative;
+        }
+        #brand {
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        #brand a {
+            color: #CFB997;
+        }
+        ul {
+            list-style: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        ul a {
+            color: white;
+        }
+        ul li {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        ul li:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        #hamburger-icon {
+            margin: auto 0;
+            display: none;
+            cursor: pointer;
+        }
+        #hamburger-icon div {
+            width: 35px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .open .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        .open .bar2 {
+            opacity: 0;
+        }
+        .open .bar3 {
+            -webkit-transform: rotate(45deg) translate(-6px, -8px);
+            transform: rotate(45deg) translate(-6px, -8px);
+        }
+        .open .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            height: calc(100vh - 50px);
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+        .mobile-menu li {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: inherit;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #333;
+        }
+        .show {
+            display: block;
+        }
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 0 15px;
+            }
+            header nav {
+                display: none;
+            }
+            #hamburger-icon {
+                display: block;
+            }
+            #brand img {
+                width: 50px;
+            }
+            .mobile-menu {
+                top: 70px;
+                padding-top: 20px;
+            }
+            .mobile-menu li a {
+                display: block;
+                padding: 15px 20px;
+                font-size: 18px;
+                transition: all 0.3s ease;
+            }
+            .mobile-menu li a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                padding-left: 30px;
+            }
+        }
+        /* Footer */
+        .footer {
+            background: #000;
+        }
+        .footer iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
+            background: #000;
         }
     </style>
-</head>
+    <style>
+        /* container for image + text */
+        .irc-entry {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
 
-<body data-barba="wrapper" style="background-color: black;">
+        /* circular image style */
+        .irc-image {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;        /* makes it perfectly circular */
+            object-fit: cover;         /* ensures image fills the circle */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+            border: 3px solid #ffffff; /* optional white border ring */
+        }
 
-    <div class="home-page">
+        /* details text area */
+        .irc-entry .details {
+            flex: 1;
+            max-width: 700px;
+        }
 
-        <header>
+        .irc-entry .details .year {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #222;
+        }
 
-            <style>
-                @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-                * {
-                    padding: 0;
-                    margin: 0;
-                    box-sizing: border-box;
-                }
-    
-                body {
-                    background-color: #353836;
-                    color: white;
-                    font-family: "Poppins", sans-serif;
-                }
-    
-                header a {
-                    text-decoration: none;
-                }
-    
-                header {
-                    padding: 0 30px;
-                background-color: #000000;
-                height: 70px;
-                display: flex;
-                justify-content: space-between;
-                z-index: 1;
-                position: relative;
-                }
-    
-                #brand {
-                    font-weight: bold;
-                    font-size: 18px;
-                    display: flex;
-                    align-items: center;
-                }
-    
-                #brand a {
-                    color: #09c372;
-                }
-    
-                ul {
-                    list-style: none;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                }
-    
-                ul a {
-                    color: white;
-                }
-    
-                ul li {
-                    padding: 5px;
-                    margin-left: 10px;
-                }
-    
-                ul li:hover {
-                    transform: scale(1.1);
-                    transition: 0.3s;
-                }
-    
-                
-    
-                #hamburger-icon {
-                    margin: auto 0;
-                    display: none;
-                    cursor: pointer;
-                }
-    
-                #hamburger-icon div {
-                    width: 35px;
-                    height: 3px;
-                    background-color: white;
-                    margin: 6px 0;
-                    transition: 0.4s;
-                }
-    
-                .open .bar1 {
-                    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-                    transform: rotate(-45deg) translate(-6px, 6px);
-                }
-    
-                .open .bar2 {
-                    opacity: 0;
-                }
-    
-                .open .bar3 {
-                    -webkit-transform: rotate(45deg) translate(-6px, -8px);
-                    transform: rotate(45deg) translate(-6px, -8px);
-                }
-    
-                .open .mobile-menu {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-start;
-                }
-    
-                .mobile-menu {
-                display: none;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                height: calc(100vh - 50px);
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-                padding: 10px 0;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
-                z-index: 2;
-            }         
+        .irc-entry .details .text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
 
-
-            /* Ensure the menu only expands to fit its content */
-            .mobile-menu li {
-                margin-bottom: 10px;
-                text-align: center; /* Center align menu items */
+        /* responsive stacking on small screens */
+        @media (max-width: 700px) {
+            .irc-entry {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
             }
-    
-                @media only screen and (max-width: 600px) {
-                    header nav {
-                        display: none;
-                    }
-                    #hamburger-icon {
-                        display: block;
-                    }
-                }
-            </style>
-    
-            <script>
-                function toggleMobileMenu(menu) {
-                    menu.classList.toggle('open');
-                }
-            </script>
-    
-            <div id="brand"><a href="/">
-          <img src="src/img/logo.png" width="75px">
+
+            .irc-image {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 15px;
+            }
+
+            .irc-entry .details {
+            max-width: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <header>
+        <div id="brand"><a href="/">
+            <img src="src/img/logo.png" width="75px" alt="Logo">
         </a></div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="rovers.html">Sponsorship</a></li>
-                    <!-- <li ><a href="div.html">Divisions</a></li> -->
-                    <li ><a href="team2023.html">Team</a></li>
-                    <li><a href="comp.html">Competitions</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                    
-                    
-                </ul>
-            </nav>
-            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <ul class="mobile-menu" style="z-index: 2;">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="rovers.html">Sponsorship</a></li>
-                    <!-- <li><a href="div.html">Divisions</a></li> -->
-                    <li><a href="team2023.html">Team</a></li>                
-                    <li><a href="comp.html">Competitions</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                    
-                </ul>
-            </div>
-        </header>
-
-        <main data-barba="container" data-barba-namespace="home">
-
-            <div id="comp" class="bg-image">
-                <div class="comp-text animate">
-                    <h2>International Rover Challenge</h2>
-                    <p>SPROS IRC is a space robotics engineering competition. It challenges university students to conceptualise, design, develop and operate an astronaut-assistive next-generation space Rover and perform specific missions in Mars simulated conditions.<br>The objective of the competition is to provide students with a real-world interdisciplinary engineering experience, combining practical engineering skills with soft skills, including business planning and project management. </p>
-                    <br>
-                    <h3>IRC - 2025</h3>
-                    <p>The Space Robotics Society (SPROS) is excited to announce the release of the updated rulebook for the SPROS International Rover Challenge (IRC) 2025. This year’s event will be hosted at the Birla Institute of Technologyand Science, Pilani, K K Birla Goa Campus, Goa, India from January 28 to February 2, 2025. </p>
-                    <br><br><br>
-                    <h3>COMPETITION MISSIONS (FINALS)</h3>
-                    <p>The IRC Finals are divided into three categories –Expeditions, Operations,and Assessments.   
-                        <li>Expeditions aremissions thatare investigatory in nature and for which teams have to present the findings and results to the judges after the completion of the mission. Expeditions contain both dynamic and static components.</li>
-                        <br>
-                        <li>Operations are the missions thatcontain only dynamic components and in which the rover has to perform specific tasks in the field.</li>
-                        <br>
-                        <li>Assessments  aremissions thatare  static  in  nature  like  Project  Implementation  and Management Assessment (PIMA) and Business and Partnership Plan (BPP).</li>
-                    </p>
-                    <br><br><br>
-                    <h3>Awards and Honours</h3>
-                    <p>
-                        <li><u>Individual Awards:</u> 20 students selected from participating rover teams will be honoured at a special ceremony during the International Space Robotics Week's opening day.Thesestudentswill be provided with their personalised webpage on the SPROS website, showcasing  their  academic  qualifications,  research,  and  involvement  in  the  rover development.  In  addition,  they  will  receive  a  unique  short  link  URL  (e.g. www.SpaceRobotics.me/JohnDoe) that can be used for all their future projects and endeavours.</li>
-                        <br>
-                        <li><u>Astrobiology Poster Presentation Awards:</u> These are presented to the best-performing individuals orteams in the Astrobiology Poster Presentation.</li>
-                        <br>
-                        <li><u>Grand Awards:</u> are presented to the IRC's top three teams, i.e., the Champion, First Runner Up, and Second Runner Up.</li>
-                        <br>
-                        <li><u>Emerging Team of the Year:</u> This is presented to the team that has made the most significant progress. Only teams that have recently been formed will be eligible for this award.</li>
-                        <br>
-                        <li><u>MissionAwards:</u> These honours will be given to teams for their creative thinking in a specific subsystem and outstanding performance in any of the IRC Finals missions. This category also includes the PIMA, BPP,and Exhibitionawards.</li>
-                    </p>
-                    <div class="read-more">
-                        <a href="https://roverchallenge.org/irc/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-external-link" aria-hidden="true"></i> Read more about IRC</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rovers.html">Sponsorship</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Team 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="team2025.html">Team 2025</a>
+                        <a href="team2023.html">Team 2024</a>
+                    </div>
+                </div>
+                <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rovers.html">Sponsorship</a></li>
+                <li><a href="team2025.html">Team 2025</a></li>
+                <li><a href="team2024.html">Team 2024</a></li>
+                <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="header">
+        <h1>Trixanth</h1>        
+        <p>Tracing our path through international rover competitions and celebrating the milestones that showcase our excellence.</p>
+        
+    </div>
+    <div class="container">
+        <section class="competition">
+            <h2>Competitions</h2>            
+            <h2>International Rover Challenge (IRC)</h2>
+            <div class="achievement irc-entry">
+                <img src="src/images/irc.jpg" alt="Team at the IRC event" class="irc-image" />
+                <div class="details">                    
+                    <div class="text">
+                    <p>SPROS IRC and ISDC are space robotics engineering competitions. They challenges university students to conceptualise, design, develop and operate an astronaut-assistive next-generation space Rover and Drone, and perform specific missions in Mars simulated conditions.<br>
+            The objective of the competitions is to provide students with a real-world interdisciplinary engineering experience, combining practical engineering skills with soft skills, including business planning and project management. </p>
+                    </div>
+                    <div class="read-more" style="text-align: center; margin-top: 50px;">
+                        <a href="https://roverchallenge.org/irc/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #694405 0%, #4a2f05 100%); color: #CFB997; text-decoration: none; border-radius: 30px; font-size: 1.1rem; transition: transform 0.3s ease; border: 2px solid #CFB997;">
+                            <i class="fa fa-external-link" aria-hidden="true" style="margin-right: 10px;"></i> Learn More About IRC
+                        </a>
+                    </div>
+                </div>
+                </div>
+            
+            <div class="journey">
+                <h3>Our Journey</h3>
+                <div class="achievement">
+                    <div class="year">2024-2025</div>
+                    <div class="details">Our First Competition<br>Competing among teams from across the globe, we proudly secured the 
+                    <strong>21<sup>st</sup> recognized position in the finals</strong> — a tremendous accomplishment for our debut year.<br>The event, held at <strong>BITS Pilani, K K Birla Goa Campus</strong>, was a platform where our team showcased 
+                    innovation, teamwork, and engineering excellence. Building upon our 2024 success.</div>
+                </div>
+                <div class="achievement">
+                    <div class="year">2025-2026</div>
+                    <div class="details">Continuing our pursuit of excellence, we are set to compete in the upcoming season, 
+                        representing our team at the prestigious <strong>International Rover Challenge (IRC) 2025-26</strong> 
+                        held in <strong>Udupi,Karnataka, India</strong>.<br>
+                        This year marks a new chapter in our journey — pushing boundaries in design, innovation, and teamwork 
+                        as we strive to surpass our previous achievements and make a mark on the global stage.</div>
+                </div>                
+            </div>            
+        </section>
+    </div>
+    <div class="comp-gallery" style="background-color: #0a0a0a; padding: 80px 20px;">
+                <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: #CFB997;">Competition Moments</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <img src="src/img/gallery/IMG-20250131-WA0027.jpg" alt="Team at Competition" style="width: 100%; height: 250px; object-fit: cover;">
+                        </div>
+                        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <img src="src/img/gallery/IMG-20250128-WA0121.jpg" alt="RoboCraft Event" style="width: 100%; height: 250px; object-fit: cover;">
+                        </div>
+                        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <img src="src/img/gallery/IMG-20250131-WA0010.jpg" alt="Rapid Tracer Competition" style="width: 100%; height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="gallery.html" style="display: inline-block; padding: 15px 40px; background: transparent; color: #CFB997; text-decoration: none; border: 2px solid #CFB997; border-radius: 30px; font-size: 1.1rem; transition: all 0.3s ease;">
+                            View Full Gallery
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="footer">
-                <iframe src="footer.html" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+                <iframe src="footer.html" width="100%" height="360px" frameborder="0" scrolling="no" style="background:#000"></iframe>
             </div>
 
         </main>
@@ -295,6 +644,42 @@
     
         gtag('config', 'UA-162930243-1');
     </script>
+
+    <script>
+        // Dropdown toggle script
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropbtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior if any
+            dropdownContent.classList.toggle('show');
+        });
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
+    </script>
+    <script>
+                function toggleMobileMenu(menu) {
+                    menu.classList.toggle('open');
+                }
+                
+                // Close mobile menu when a link is clicked
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+                    const hamburgerIcon = document.getElementById('hamburger-icon');
+                    
+                    mobileMenuLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            hamburgerIcon.classList.remove('open');
+                        });
+                    });
+                });
+            </script>
 </body>
 
 </html>

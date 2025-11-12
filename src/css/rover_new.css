@@ -1063,3 +1063,177 @@ img {
         opacity: 1
     }
 }
+/* ==========================================================================
+   Enhanced Mobile and Mid-Range Views for Sponsorship Packages
+   ========================================================================== */
+
+/* Mid-Range View (Tablets and Small Laptops: 768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .timeline_item {
+        grid-template-columns: 1fr 120px 1fr; /* Narrower center column for better balance */
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .timeline_date-text {
+        font-size: 42px; /* Scaled down from desktop 48px */
+        line-height: 1.2;
+    }
+
+    .timeline_text {
+        font-size: 22px; /* Scaled down from desktop 24px */
+        line-height: 1.3;
+    }
+
+    .timeline_circle {
+        width: 12px;
+        height: 12px;
+        box-shadow: 0 0 0 6px #0a0a0a; /* Smaller shadow */
+    }
+
+    .timeline_image-wrapper img {
+        max-width: 250px; /* Limit image size */
+    }
+
+    .padding-vertical-xxlarge {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    .padding-vertical-xlarge {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    /* Adjust container width for mid-range */
+    .container {
+        width: 95vw;
+    }
+}
+
+/* Enhanced Mobile View (Max 767px) - Improved Stacking */
+@media screen and (max-width: 767px) {
+    .timeline_item {
+        display: flex !important; /* Override grid to flex for better stacking */
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px; /* Reduced padding */
+        gap: 20px; /* Space between elements */
+    }
+
+    .timeline_left {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .timeline_centre {
+        order: 2;
+        margin: 10px 0;
+    }
+
+    .timeline_right {
+        order: 3;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .timeline_date-text {
+        position: static; /* Remove sticky for mobile */
+        top: auto;
+        font-size: 32px; /* Further reduced */
+        margin-bottom: 15px;
+    }
+
+    .timeline_text {
+        font-size: 18px; /* Smaller for readability */
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .timeline_circle {
+        position: static;
+        top: auto;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 4px #0a0a0a;
+    }
+
+    .timeline_image-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .timeline_image-wrapper img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .timeline_progress {
+        display: none; /* Hide progress bar on mobile for cleaner look */
+    }
+
+    .timeline_progress-bar {
+        display: none;
+    }
+
+    /* Price badges */
+    .timeline_right h1 {
+        font-size: 20px !important;
+        padding: 8px 15px !important;
+        display: block !important;
+        margin: 0 auto;
+    }
+
+    /* Adjust container and paddings */
+    .container {
+        width: 95vw;
+    }
+
+    .padding-vertical-xxlarge {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .padding-vertical-xlarge {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* Extra Small Mobile (Max 479px) - Further Optimizations */
+@media screen and (max-width: 479px) {
+    .timeline_item {
+        padding: 30px 15px;
+        gap: 15px;
+    }
+
+    .timeline_date-text {
+        font-size: 28px;
+    }
+
+    .timeline_text {
+        font-size: 16px;
+    }
+
+    .timeline_image-wrapper img {
+        max-width: 200px;
+    }
+
+    .timeline_right h1 {
+        font-size: 18px !important;
+        padding: 6px 12px !important;
+    }
+
+    .padding-vertical-xxlarge {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .padding-vertical-xlarge {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

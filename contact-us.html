@@ -67,8 +67,8 @@
     margin: auto auto;
     max-width: 80%;
     padding: 30px;
-    background-color:wheat;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* background-color:rgb(64, 54, 41); */
+    /* box-shadow: 0 4px 10px rgba(231, 120, 52, 0.3); */
     border-radius: 10px;
 }
             }
@@ -76,20 +76,39 @@
 .contact-info {
     display: flex;
     flex-direction: row;
-    align-items: center;  /* Centers the items horizontally */
-    justify-content: center; /* Centers the items vertically if needed */
-    gap: 30px;  /* Space between items */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact-info div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    /* background: rgba(215, 85, 85, 0.1); */
+    border-radius: 10px;
+    min-width: 200px;
 }
 
 .contact-info i {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-info div {
+        min-width: 100%;
+        padding: 15px;
+    }
 }
 
 
@@ -227,14 +246,38 @@
 
 
 
-            
-
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 768px) {
+                header {
+                    padding: 0 15px;
+                }
+                
                 header nav {
                     display: none;
                 }
+                
                 #hamburger-icon {
                     display: block;
+                }
+                
+                #brand img {
+                    width: 50px;
+                }
+                
+                .mobile-menu {
+                    top: 70px;
+                    padding-top: 20px;
+                }
+                
+                .mobile-menu li a {
+                    display: block;
+                    padding: 15px 20px;
+                    font-size: 18px;
+                    transition: all 0.3s ease;
+                }
+                
+                .mobile-menu li a:hover {
+                    background-color: rgba(255, 255, 255, 0.784);
+                    padding-left: 30px;
                 }
             }
         </style>
@@ -243,6 +286,18 @@
             function toggleMobileMenu(menu) {
                 menu.classList.toggle('open');
             }
+            
+            // Close mobile menu when a link is clicked
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburgerIcon.classList.remove('open');
+                    });
+                });
+            });
         </script>
 
         <div id="brand"><a href="/">
@@ -253,8 +308,18 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li ><a href="div.html">Divisions</a></li> -->
-                <li ><a href="team2023.html">Team</a></li>
+                <div class="dropdown">
+                        <button class="dropbtn">Team 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="team2025.html">Team 2025</a>
+                          <a href="team2023.html">Team 2024</a>
+                        </div>  
+                    <!-- <li ><a href="team2023.html">Team</a></li> -->
+                    </div>
                 <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 
                 
@@ -268,8 +333,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rovers.html">Sponsorship</a></li>
                 <!-- <li><a href="div.html">Divisions</a></li> -->
-                <li><a href="team2023.html">Team</a></li>                
+                <li><a href="team2025.html">Team 2025</a></li>
+                <li><a href="team2024.html">Team 2024</a></li>              
                 <li><a href="comp.html">Competitions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 
             </ul>
@@ -327,7 +394,7 @@
                 </form> -->
                 <div id="ff-compose"></div>
                 
-                <script async defer src="https://formfacade.com/include/113991001960694647138/form/1FAIpQLScZo7sd-4ebhyfm8HEUW8RM0Qiiia5PJmP7PHQlkJrgeH1g3w/classic.js?div=ff-compose"></script>
+                <script async defer src="https://docs.google.com/forms/d/e/1FAIpQLScZo7sd-4ebhyfm8HEUW8RM0Qiiia5PJmP7PHQlkJrgeH1g3w/viewform?usp=dialog"></script>
 
                 <!-- <div>
                     <img src="./src/img/contact-image/contact-png.png" alt="">
@@ -393,6 +460,25 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+<script>
+        // Dropdown toggle script
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropbtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior if any
+            dropdownContent.classList.toggle('show');
+        });
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
+    </script>
+
 
 </body>
 

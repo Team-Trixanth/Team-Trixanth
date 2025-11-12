@@ -179,48 +179,57 @@
     #home {
         background: url("../img/home_1st_background.jpg") no-repeat center;
         background-size: cover;
-        /* padding: 350px 0px 350px 0px; */
-        height: 75vh;
-        padding: 150px 0px 150px 0px;
+        height: 100vh;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .home-intro-text {
         font-weight: 400;
-        font-size: 25px;
-        line-height: 28px;
-        width: 85%;
+        font-size: 20px;
+        line-height: 26px;
+        width: 90%;
+        padding: 0 20px;
     }
     .home-intro-text h2 {
         font-weight: 600;
-        font-size: 35px;
-        line-height: 31px;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 20px;
     }
     #aboutUs {
         background: url("../img/home_2nd_bg.jpg") no-repeat center;
         background-size: cover;
-        padding: 30px 0px 50px 0px;
-        height: 75vh;
-        padding-top: 2vh;
-        padding-left: 2vh;
-        padding-right: 5vh;
+        padding: 40px 20px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
     }
     .aboutUs-text {
-        width: 90% !important;
+        width: 95% !important;
         color: #ffffff;
         font-weight: 400;
-        /* width: 90%; */
-        font-size: 15px;
-        line-height: 18px;
-        margin-left: 7%;
-        margin-top: 7vh;
-        margin-right: 6%;
-        /* padding: 43px 0px 0px 49px; */
+        font-size: 16px;
+        line-height: 22px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(87, 48, 48, 0.404) !important;
     }
     .aboutUs-text h2 {
         font-weight: 600;
-        font-size: 25px;
-        line-height: 21px;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        color: #ffffff;
     }
-   
+    .read-more {
+        margin-top: 20px;
+    }
+    .read-more a {
+        font-size: 14px;
+        color: #ffffff;
+    }
 }
 
 

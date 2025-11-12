@@ -26,10 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var preloader = document.getElementById('preloader-container');
 
     video.addEventListener('loadeddata', function() {
-        // Optionally add a delay or other conditions before hiding the preloader
         setTimeout(function() {
             fadeOut(preloader);
-        }, 3500); // Adjust the delay before hiding the preloader
+        }, 3500);
     });
 
     function fadeOut(element) {
@@ -40,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.style.display = 'none';
             } else {
                 element.style.opacity = opacity;
-                opacity -= 0.01; // Adjust the decrement value for the desired fade speed
+                opacity -= 0.01;
             }
-        }, 10); // Adjust the interval for the smoothness of the fade-out effect
+        }, 10);
     }
 });
 

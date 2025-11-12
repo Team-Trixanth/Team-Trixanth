@@ -99,7 +99,7 @@
 }
 
 .read-more a:hover {
-    color: rgb(135, 66, 66);
+    color: #8B6F47;
 }
 
 .comp-text h2 {
@@ -108,44 +108,72 @@
     line-height: 61px;
 }
 
+/* Mobile Responsive Styles */
 @media screen and (max-width: 767px) {
-    #home {
-        padding: 150px 0px 150px 0px;
-    }
-    #comp {
-        background-size: cover;
-        padding: 20px;
+    /* Hero Section */
+    .comp-hero h1 {
+        font-size: 2rem !important;
     }
     
-    .comp-text {
-        width: 100% !important;
-        color: #ffffff;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
-        /* padding: 43px 0px 0px 49px; */
-    }
-    .comp-text h2 {
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 21px;
-    }
-    .comp-text {
-        background-color: rgba(87, 48, 48, 0.404);
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 6%;
-        color: aliceblue;
-        padding-bottom: 1%;
-        font-family: Relative, sans-serif;
-        font-style: normal;
-        font-weight: 400;        
-        width: 100%;
-        margin-left: 0vh;
-        margin-top: 15vh;
-        margin-right: 0vh;
+    .comp-hero p {
+        font-size: 1rem !important;
     }
     
+    /* Story Section */
+    .comp-story .story-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .comp-story h2 {
+        font-size: 2rem !important;
+    }
+    
+    .comp-story p {
+        font-size: 1rem !important;
+    }
+    
+    /* Achievement Cards */
+    .achievement-cards {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .achievement-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Info Grid */
+    .info-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Competition Details */
+    .competition-details > div {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    
+    /* Awards Section */
+    .awards-section > div {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Gallery Section */
+    .comp-gallery > div > div {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .comp-gallery h2 {
+        font-size: 2rem !important;
+    }
+    
+    /* General padding adjustments */
+    .comp-hero,
+    .comp-story,
+    .comp-info,
+    .comp-gallery {
+        padding: 40px 15px !important;
+    }
 }
 
 .comp {
