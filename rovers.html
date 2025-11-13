@@ -797,9 +797,41 @@
         </div>
     </div>
 
-        <div class="footer">
-            <iframe src="footer.html" width="100%" height="360px" frameborder="0" scrolling="no" style="background:#000"></iframe>
-        </div>
+                <div class="footer">
+                    <iframe src="footer.html" class="footer-iframe" width="100%" frameborder="0" scrolling="no" style="background:#000"></iframe>
+                </div>
+
+                 <!-- Add some styles to ensure the iframe doesn't disrupt the layout  -->
+
+                <style>                   /* Add some styles to ensure the iframe doesn't disrupt the layout */              
+
+                    
+                    .footer-iframe {
+                            height: 360px;
+                        }
+
+                    /* Add a media query for smaller screens */
+                    @media (max-width: 1100px) {
+                       
+                        .footer-iframe {
+                            height: 550px;
+                        }
+                    }
+                    
+                    @media (max-width: 768px) {
+                        
+                        .footer-iframe {
+                            height: 400px;
+                        }
+                    }
+                    
+                    @media (max-width: 600px) {
+                        
+                        .footer-iframe {
+                            height: 500px;
+                        }
+                    }
+                </style>
 
         <div class="loader-wrapper">
             <span class="loader"><span class="loader-inner"></span></span>
