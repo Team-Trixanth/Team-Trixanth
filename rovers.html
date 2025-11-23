@@ -129,17 +129,40 @@
 }
 
 .silver-tier .logo {
-    width: 150px; /* Medium for Silver */
+    width: 250px; /* Medium for Silver */
 }
 
 .bronze-tier .logo {
-    width: 90px; /* Smaller for Bronze */
+    width: 180px; /* Smaller for Bronze */
+    
 }
-
-.logo:hover {
+.technical-tier .logo {
+    width: 140px; /* Smaller for techical-tire */
+    
+}
+.gold-tier .logo:hover {
     transform: scale(1.1);
-    filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 215, 0, 0.5)); /* Gold shine effect */
+    filter: brightness(1.1) drop-shadow(0 0 10px rgba(211, 175, 45, 0.91)); /* Gold shine effect */  
 }
+.silver-tier .logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1) drop-shadow(0 0 10px rgba(216, 216, 216, 0.5)); /* Gold shine effect */ 
+}
+.bronze-tier .logo:hover {
+    transform: scale(2);
+    filter: brightness(1.1) drop-shadow(0 0 10px  #a9641f); /* Gold shine effect */ 
+    
+}
+.technical-tier .logo:hover {
+    transform: scale(2);
+    filter: brightness(1.1) drop-shadow(0 0 10px #8e1b1bd5); /* Gold shine effect */
+}
+    
+
+/* .logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 215, 0, 0.5)); 
+} */
 
 /* Animation Keyframes */
 @keyframes slideIn {
@@ -191,11 +214,14 @@
     }
     
     .silver-tier .logo {
-        width: 120px;
+        width: 170px;
     }
     
     .bronze-tier .logo {
-        width: 70px;
+        width: 130px;
+    }
+    .technical-tier .logo {
+        width: 100px;
     }
     
     .logo {
@@ -218,12 +244,14 @@
     }
     
     .silver-tier .logo {
-        width: 100px;
+        width: 150px;
     }
     
     .bronze-tier .logo {
-        width: 60px;
+        width: 120px;
     }
+    .technical-tier .logo {
+        width: 100px;
 }
 
     </style>
@@ -288,6 +316,10 @@
 }
 
 .bronze-tier {
+    background-color: #000000;
+    color: #333;
+}
+.technical-tier {
     background-color: #000000;
     color: #333;
 }
@@ -766,28 +798,32 @@
         <div class="sponsors-container">
             <!-- Gold Sponsors -->
             <div class="sponsor-tier gold-tier animate-on-scroll">
-                <!-- <h2>Gold Sponsors</h2> -->
+                <h2>Gold Sponsors</h2>
                 <div class="logos">
-                    <img class="logo animate-stagger" src="src/images/logo (1).png" alt="DSU Logo">
-                    
-                    <img class="logo animate-stagger" src="src/images/csst logo.png" alt="CSST Logo">
-                    <!-- <img class="logo animate-stagger" src="src/images/Altium_Logo_WHT.png" alt="CSST Logo"> -->
-                    <!-- <img class="logo animate-stagger" src="src/images/Vaidyuthi-Logo-web-1.png" alt="Vaidyuthi Modalities Logo"> -->
+                    <img class="logo animate-stagger" src="src/images/logo (1).png" alt="DSU Logo">                    
+                    <img class="logo animate-stagger" src="src/images/csst logo.png" alt="CSST Logo">                    
+                    <!-- <img class="logo animate-stagger" src="src/images/Vaidyuthi-Logo-web-1.png" alt="Vaidyuthi Modalities Logo">  -->
                 </div>
             </div>
-            <!-- Silver Sponsors -->
-            <div class="sponsor-tier silver-tier animate-on-scroll">
-                <!-- <h2>Silver Sponsors</h2> -->
-                <div class="logos">
-                    <!-- <img class="logo animate-stagger" src="src/images/Altium_Logo_WHT.png" alt="CSST Logo"> -->
+            
+            <!-- <div class="sponsor-tier silver-tier animate-on-scroll">
+                <h2>Silver Sponsors</h2>
+                <div class="logos">                 
                     
                 </div>
             </div>
-            <!-- Bronze Sponsors -->
+            
             <div class="sponsor-tier bronze-tier animate-on-scroll">
-                <!-- <h2>Bronze Sponsors</h2> -->
+                <h2>Bronze Sponsors</h2>
+                <div class="logos">             
+                    
+                </div>
+            </div>  -->
+            
+            <div class="sponsor-tier technical-tier animate-on-scroll">
+                <h2>Technical Sponsors</h2>
                 <div class="logos">
-                    <!-- <img class="logo animate-stagger" src="src/images/Altium_Logo_WHT.png" alt="CSST Logo"> -->
+                    <img class="logo animate-stagger" src="src/images/Altium_Logo_WHT.png" alt="CSST Logo">
                     
                 </div>
             </div> 
